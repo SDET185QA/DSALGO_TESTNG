@@ -8,7 +8,7 @@ import org.openqa.selenium.WebDriver;
 
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
-
+import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import utilities.ExcelReader;
 
@@ -24,8 +24,9 @@ public class BaseClass {
 
 	@BeforeClass
 	@Parameters({"browser"})
-	public void setUp(String browser) {
-		
+	public void setUp(@Optional("chrome") String browser) {
+		if(browser.trim()=="")
+			browser = ConfigReader.getBrowserType();
 		DriverFactory.initializeBrowser(browser);
 		driver = DriverFactory.getDriver();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
