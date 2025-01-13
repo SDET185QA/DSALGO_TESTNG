@@ -17,9 +17,6 @@
 
 						<!--<suiteXmlFile>Parallel_testng.xml</suiteXmlFile> -->
 					</suiteXmlFiles>
-					 <systemPropertyVariables>
-            <allure.results.directory>${project.build.directory}/custom-folder/allure-results</allure.results.directory>
-        </systemPropertyVariables>
 				</configuration>
 				</plugin>
 			<plugin>
