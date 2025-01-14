@@ -64,25 +64,7 @@ public class BaseClass {
 		
 	}
 	
-	public String failedTestShot(String methodname)
-	{
-		String filepath = null;
-		System.out.println();
-		File screenshotFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-		
-		
-		
-		try {
-			Allure.addAttachment("screenshot", FileUtils.openInputStream(screenshotFile));
-			filepath = System.getProperty("user.dir")+"/ScreenShots/"+methodname+".png";
-			FileUtils.copyFile(screenshotFile, new File(filepath));
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		 
-		return filepath;
-	}
+
 	
 
 }
