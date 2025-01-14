@@ -5,6 +5,8 @@
 <listeners>
 		<listener class-name="listeners.Listeners"></listener>
 		<listener class-name="utilities.AnnotationTransformer"></listener>
+		<listener class-name="listeners.AllureRetryListener"></listener>
+		
 	</listeners>
 	
   <test name="Test DsAlgo Browser:Chrome">
@@ -12,7 +14,7 @@
     <classes>
    
 	<class name="pageTests.LoginTest"/>
-	 <class name="pageTests.ArrayTest"/> 
+	<class name="pageTests.ArrayTest"/> 
    	</classes>
   </test>
 </suite> <!-- Suite -->
