@@ -1,9 +1,12 @@
 package base;
+import java.io.File;
 import java.io.IOException;
 import java.time.Duration;
 
-
+import org.apache.commons.io.FileUtils;
 import org.apache.logging.log4j.Logger;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 
 import org.testng.annotations.AfterClass;
@@ -13,6 +16,7 @@ import org.testng.annotations.Parameters;
 import utilities.ExcelReader;
 
 import driver.DriverFactory;
+import io.qameta.allure.Allure;
 import pageObjects.LoginPage;
 import utilities.ConfigReader;
 
@@ -58,6 +62,27 @@ public class BaseClass {
 		sign.enter_user_password(password);
 		sign.clickonLogin(); 
 		
+	}
+	
+	public String failedTestShot(String methodname)
+	{
+		String filepath = null;
+		System.out.println();
+		File screenshotFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+		
+		// String screenshotBase64 = ((TakesScreenshot) element).getScreenshotAs(OutputType.BASE64);
+		
+		try {
+			Allure.addAttachment("screenshot", FileUtils.openInputStream(screenshotFile));
+			filepath = System.getProperty("user.dir")+"/ScreenShots/"+methodname+".png";
+					//"C:\\Users\\golda\\eclipse-workspacenew\\DsAlgoTestNgProject\\src\\test\\java\\util\\"+methodname+".png";
+			FileUtils.copyFile(screenshotFile, new File(filepath));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		 
+		return filepath;
 	}
 	
 
