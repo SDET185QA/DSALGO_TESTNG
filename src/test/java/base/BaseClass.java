@@ -70,12 +70,11 @@ public class BaseClass {
 		System.out.println();
 		File screenshotFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 		
-		// String screenshotBase64 = ((TakesScreenshot) element).getScreenshotAs(OutputType.BASE64);
+		
 		
 		try {
 			Allure.addAttachment("screenshot", FileUtils.openInputStream(screenshotFile));
 			filepath = System.getProperty("user.dir")+"/ScreenShots/"+methodname+".png";
-					//"C:\\Users\\golda\\eclipse-workspacenew\\DsAlgoTestNgProject\\src\\test\\java\\util\\"+methodname+".png";
 			FileUtils.copyFile(screenshotFile, new File(filepath));
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
