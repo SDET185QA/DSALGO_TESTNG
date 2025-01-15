@@ -48,6 +48,15 @@ public class ConfigReader {
 			throw new RuntimeException("browser not specified in the Configuration.properties file.");
 	}
 	
+	public static String getRetryAnalyserLimit() {
+		String retrylimit = properties.getProperty("retrylimit");
+
+		if (retrylimit != null)
+			return retrylimit;
+		else
+			throw new RuntimeException("retrylimit not specified in the Configuration.properties file.");
+	}
+	
 
 	
 	

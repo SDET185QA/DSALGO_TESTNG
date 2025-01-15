@@ -15,7 +15,7 @@
     <classes>
    
 	<class name="pageTests.LoginTest"/>
-	<class name="pageTests.ArrayTest"/> 
+	<class name="pageTests.ArrayTest"/>
    	</classes>
   </test>
 </suite> <!-- Suite -->
