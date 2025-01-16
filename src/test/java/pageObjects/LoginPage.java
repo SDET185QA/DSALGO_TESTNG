@@ -36,28 +36,6 @@ public class LoginPage {
 	    private WebElement logoutalert;
 		
 		
-		@FindBy(xpath = "//a[@href='data-structures-introduction']")
-	    private WebElement getStartedDataStructures;
-		
-		@FindBy(xpath = "//a[@href='array']")
-	    private WebElement getStartedArray;
-		
-		@FindBy(xpath = "//a[@href='linked-list']")
-	    private WebElement getStartedLinkedList;
-		
-		@FindBy(xpath = "//a[@href='stack']")
-	    private WebElement getStartedStack;
-		
-		
-		@FindBy(xpath = "//a[@href='queue']")
-	    private WebElement getStartedQueue;
-		
-		
-		@FindBy(xpath = "//a[@href='tree']")
-	    private WebElement getStartedTree;
-		
-		@FindBy(xpath = "//a[@href='graph']")
-	    private WebElement getStartedGraph;
 		
 		// Constructor to initialize the page object with the WebDriver instance
 		public LoginPage() {
@@ -136,11 +114,7 @@ public class LoginPage {
 							
 					
 				}
-	  public void clickOnGetstartedDataStructures() {
-			LoggerLoad.info("Clicking on Datastructures-Introduction getstarted");
-			getStartedDataStructures.click();
-					
-				}
+
 	  public void clickonLogout() {
 			LoggerLoad.info("Clicking in Signout Button " );
 			signoutButton.click();
@@ -153,32 +127,5 @@ public class LoginPage {
 		   return logoutMessage;
 		   }
 				
-       public void clickOnGetstartedArray() {
-    	   LoggerLoad.info("Clicking on Array Getstarted" );		
-    	   getStartedArray.click();
-    	   }
-       public void clickOnGetstartedLinkedList() {
-    	   LoggerLoad.info("Clicking on Linked List Getstarted" );	
-    	   getStartedLinkedList.click();
-    	   }
-       public void clickOnGetstartedStack() {
-    	   LoggerLoad.info("Clicking on Linked List Getstarted" );	
-    	   getStartedStack.click();
-    	   }
-       public void clickOnGetstartedQueue() {
-	
-    	   LoggerLoad.info("Clicking on Queue Getstarted" );	
-    	   getStartedQueue.click();
-    	   }
-       public void clickOnGetstartedTree() {
-    	   LoggerLoad.info("Clicking on Tree  Getstarted" );	
-    	   getStartedTree.click();
-    	   }
-
-       public void clickOnGetstartedGraph() {
-    	   LoggerLoad.info("Clicking on Graph  Getstarted" );	
-    	   getStartedGraph.click();
-					
-				}
 
 }

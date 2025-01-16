@@ -6,6 +6,7 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import utilities.ConfigReader;
+import pageObjects.HomePage;
 import pageObjects.LoginPage;
 import base.BaseClass;
 
@@ -16,6 +17,7 @@ public class LoginTest extends BaseClass {
 
 	LoginPage  sign;
 	ConfigReader reader = new ConfigReader();
+	HomePage homePage;
  
 	
 	@BeforeClass
@@ -111,10 +113,11 @@ public class LoginTest extends BaseClass {
 	@Test(priority=4)
 	public void DataStructuresSignOut() throws IOException {
 		LoginPage sign = new LoginPage();
+		HomePage homePage = new HomePage();
 		loginToPortal();
 		LoggerLoad.info("Testing Datastructure Page  Logout");
 		String expectedLogoutMessage = "Logged out successfully";
-		sign.clickOnGetstartedDataStructures();
+		homePage.getStartedhome("Data Structures-Introduction");
 		sign.clickonLogout();
 		String logoutMessage = sign.getlogoutAlert(expectedLogoutMessage);
 		LoggerLoad.info("The validate Datastructure page sign out actual message is "+logoutMessage +"and the expected message is"+expectedLogoutMessage);
@@ -124,10 +127,11 @@ public class LoginTest extends BaseClass {
 	@Test(priority=5)
 	public void ArraySignOut() throws IOException {
 		LoginPage sign = new LoginPage();
+		HomePage homePage = new HomePage();
 		loginToPortal();
 		LoggerLoad.info("Testing Array Page Logout");
 		String expectedLogoutMessage = "Logged out successfully";
-		sign.clickOnGetstartedArray();
+		homePage.getStartedhome("Arrays");
 		sign.clickonLogout();
 		String logoutMessage = sign.getlogoutAlert(expectedLogoutMessage);
 		LoggerLoad.info("The validate Array page sign out actual message is "+logoutMessage +"and the expected message is"+expectedLogoutMessage);
@@ -137,10 +141,11 @@ public class LoginTest extends BaseClass {
 	@Test(priority=6)
 	public void LinkedListSignOut() throws IOException {
 		LoginPage sign = new LoginPage();
+		HomePage homePage = new HomePage();
 		loginToPortal();
 		LoggerLoad.info("Testing Linked List  Page Logout");
 		String expectedLogoutMessage = "Logged out successfully";
-		sign.clickOnGetstartedLinkedList();
+		homePage.getStartedhome("Linked List");
 		sign.clickonLogout();
 		String logoutMessage = sign.getlogoutAlert(expectedLogoutMessage);
 		LoggerLoad.info("The validate Linked List page sign out actual message is "+logoutMessage +"and the expected message is"+expectedLogoutMessage);
@@ -151,10 +156,11 @@ public class LoginTest extends BaseClass {
 	@Test(priority=7)
 	public void StackSignOut() throws IOException {
 		LoginPage sign = new LoginPage();
+		HomePage homePage = new HomePage();
 		loginToPortal();
 		LoggerLoad.info("Testing Stack  Page Logout");
 		String expectedLogoutMessage = "Logged out successfully";
-		sign.clickOnGetstartedStack();
+		homePage.getStartedhome("Stack");
 		sign.clickonLogout();
 		String logoutMessage = sign.getlogoutAlert(expectedLogoutMessage);
 		LoggerLoad.info("The validate Stack page sign out actual message is "+logoutMessage +"and the expected message is"+expectedLogoutMessage);
@@ -164,10 +170,11 @@ public class LoginTest extends BaseClass {
 	@Test(priority=8)
 	public void QueueSignOut() throws IOException {
 		LoginPage sign = new LoginPage();
+		HomePage homePage = new HomePage();
 		loginToPortal();
 		LoggerLoad.info("Testing Queue  Page Logout");
 		String expectedLogoutMessage = "Logged out successfully";
-		sign.clickOnGetstartedQueue();
+		homePage.getStartedhome("Queue");
 		sign.clickonLogout();
 		String logoutMessage = sign.getlogoutAlert(expectedLogoutMessage);
 		LoggerLoad.info("The validate Queue page sign out actual message is "+logoutMessage +"and the expected message is"+expectedLogoutMessage);
@@ -178,10 +185,11 @@ public class LoginTest extends BaseClass {
 	@Test(priority=9)
 	public void TreeSignOut() throws IOException {
 		LoginPage sign = new LoginPage();
+		HomePage homePage = new HomePage();
 		loginToPortal();
 		LoggerLoad.info("Testing Tree  Page Logout");
 		String expectedLogoutMessage = "Logged out successfully";
-		sign.clickOnGetstartedTree();
+		homePage.getStartedhome("Tree");
 		sign.clickonLogout();
 		String logoutMessage = sign.getlogoutAlert(expectedLogoutMessage);
 		LoggerLoad.info("The validate Tree page sign out actual message is "+logoutMessage +"and the expected message is"+expectedLogoutMessage);
@@ -191,10 +199,11 @@ public class LoginTest extends BaseClass {
 	@Test(priority=10)
 	public void GraphSignOut() throws IOException {
 		LoginPage sign = new LoginPage();
+		HomePage homePage = new HomePage();
 		loginToPortal();
 		LoggerLoad.info("Testing Graph  Page Logout");
 		String expectedLogoutMessage = "Logged out successfully";
-		sign.clickOnGetstartedGraph();
+		homePage.getStartedhome("Graph");
 		sign.clickonLogout();
 		String logoutMessage = sign.getlogoutAlert(expectedLogoutMessage);
 		LoggerLoad.info("The validate Graph page sign out actual message is "+logoutMessage +"and the expected message is"+expectedLogoutMessage);
