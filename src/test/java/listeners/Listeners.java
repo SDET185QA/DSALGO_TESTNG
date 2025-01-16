@@ -105,7 +105,9 @@ public void onTestFailure(ITestResult result) {
 			extentTest.assignAuthor("Quality "+" "+ "Questers");
 			extentTest.assignCategory("Quality"+" "+ " " +"Questers" + " "+ "TestNG" + " " +"Failed"+ " "+ " Test Cases");
 			CaptureScreenshot.takeScreenshot(ScreenshotName);
-			 
+			//extentTest.addScreenCaptureFromBase64String(ScreenshotDir, ScreenshotName);//added now	
+			//extentTest.addScreenCaptureFromBase64String(ScreenshotDir, ScreenshotName);//added now	
+			extentTest.addScreenCaptureFromPath(path);
 	    	getScreenShot(driver);
 	     	Allure.addAttachment(ScreenshotName, new ByteArrayInputStream(getScreenShot(driver)));
 	    	         		
