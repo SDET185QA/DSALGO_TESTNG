@@ -1,0 +1,9 @@
+/target/
+.classpath
+.project
+.settings/
+/allure-results/
+/screenshots/
+/logs/
+/test-output/
+DSAlgoTestNGExtentReports.html
