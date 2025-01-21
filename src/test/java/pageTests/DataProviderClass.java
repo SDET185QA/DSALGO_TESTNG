@@ -119,4 +119,27 @@ public class DataProviderClass {
 		}
 		return subPageTryEditorUrl;
 	}
+
+@DataProvider (name = "Valid Input")
+public String[][] CodeData() throws IOException {
+	String codeValue = excelReader.getCellData("QueueCode", 1, 0);
+	String outputValue = excelReader.getCellData("QueueCode", 1, 1);
+	
+	String code [][] = {
+		{codeValue, outputValue}
+	};
+	
+	return code;
+}
+
+@DataProvider (name = "Invalid Input")
+public String [][] InvalidCodeData() throws IOException {
+			String codeValue = excelReader.getCellData("QueueCode", 2, 0);
+			String outputValue = excelReader.getCellData("QueueCode", 2, 1);
+			String code[][]= {
+			{codeValue,outputValue}
+		};
+			
+	return code;
+}
 }
