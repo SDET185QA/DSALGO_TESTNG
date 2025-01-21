@@ -97,6 +97,7 @@ public class LinkedListPage {
 		String msg = driver.switchTo().alert().getText();
 		return msg;
 	}
+	
    public void openSubPage(String subPage) {
 	   switch (subPage) {
 	   		case "Introduction":

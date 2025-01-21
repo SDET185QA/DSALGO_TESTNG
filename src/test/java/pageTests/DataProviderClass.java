@@ -13,10 +13,8 @@ import utilities.Utility_Methods;
 public class DataProviderClass {
 	
 	ConfigReader reader = new ConfigReader();
-	
-
-	
 	ExcelReader excelReader = new ExcelReader(ConfigReader.getexcelfilepath());
+	
 	@DataProvider(name = "ValidLoginData")
 	public String[][] getValidLoginData() throws IOException {
 		int totalrows = excelReader.getRowCount("Login");
@@ -29,7 +27,6 @@ public class DataProviderClass {
 		validLoginData[0][2] = excelReader.getCellData("Login", 1, 2);
 		return validLoginData; 
 	}
-	
 	
 	@DataProvider(name = "InValidLoginData")
 	public String[][] getInValidLoginData() throws IOException {
@@ -74,9 +71,52 @@ public class DataProviderClass {
 			{2,"Basic Operations in Lists","Assessment"},
 			{3,"Applications of Array","Assessment"}
 		};
-
-	
-	
-
 	}	
+
+	@DataProvider (name = "Valid Python Code")
+	public String[][] codeData() throws IOException {
+		String codeValue = excelReader.getCellData("LLStackCode", 1, 0);
+		String outputValue = excelReader.getCellData("LLStackCode", 1, 1);
+		
+		String code [][] = {
+			{codeValue, outputValue}
+		};
+		
+		return code;
+	}
+
+	@DataProvider (name = "Invalid Python Code")
+	public String [][] invalidCodeData() throws IOException {
+				String codeValue = excelReader.getCellData("LLStackCode", 2, 0);
+				String outputValue = excelReader.getCellData("LLStackCode", 2, 1);
+				String code[][]= {
+				{codeValue,outputValue}
+			};
+				
+		return code;
+	}
+
+	@DataProvider (name = "Open Sub Pages")
+	public String [][] subPageExpUrl() throws IOException{
+		int totalRows = excelReader.getRowCount("SubPages");
+		String subPageExpUrl [][] = new String[totalRows][2];
+		for (int rowIdx = 1; rowIdx <= totalRows; rowIdx++) {
+			for (int colIdx = 0; colIdx <= 1; colIdx++) {
+				subPageExpUrl[rowIdx - 1][colIdx] = excelReader.getCellData("SubPages", rowIdx, colIdx);
+				}
+		}
+		return subPageExpUrl;
+	}
+
+	@DataProvider (name = "Open Try Editor From Sub Pages")
+	public String [][] subPageTryEditorUrl() throws IOException{
+		int totalRows = excelReader.getRowCount("TryEditorSubPages");
+		String subPageTryEditorUrl [][] = new String [totalRows][2];
+		for (int rowIdx = 1; rowIdx <= totalRows; rowIdx++) {
+			for (int colIdx = 0; colIdx <= 1; colIdx++) {
+				subPageTryEditorUrl[rowIdx -1][colIdx] = excelReader.getCellData("TryEditorSubPages", rowIdx, colIdx);
+			}
+		}
+		return subPageTryEditorUrl;
+	}
 }

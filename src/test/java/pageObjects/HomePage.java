@@ -44,7 +44,9 @@ public class HomePage {
 	//Register
 	@FindBy (xpath="//a[@href ='/register']")WebElement register;
 
-
+	//Return to Home page
+	@FindBy(xpath = "//a[@href=\"/home\"]")
+	WebElement retHomePage;
 	//Home Page url     
 	public HomePage() {
 		PageFactory.initElements(driver,this);
@@ -160,5 +162,8 @@ public class HomePage {
 		return title;
 	}
 
-
+// Function to return to home page 
+	public void retunToHomePage() {
+		retHomePage.click();
+	}
 }
