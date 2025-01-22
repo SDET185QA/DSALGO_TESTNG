@@ -29,7 +29,7 @@ public class QueueTest extends BaseClass{
 	@BeforeMethod()
 	public void queuePage(){
 		
-		LoggerLoad.info("Clicking on Get started");
+		LoggerLoad.info("Clicking on Queue Dropdown");
 		Queue.dropDownClick();	
 		Queue.queueDropClick();
 		

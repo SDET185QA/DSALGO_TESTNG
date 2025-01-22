@@ -142,4 +142,26 @@ public String [][] InvalidCodeData() throws IOException {
 			
 	return code;
 }
+@DataProvider (name = "Graph Valid Input")
+public String[][] GraphCodeData() throws IOException {
+	String codeValue = excelReader.getCellData("GraphCode", 1, 0);
+	String outputValue = excelReader.getCellData("GraphCode", 1, 1);
+	
+	String code [][] = {
+		{codeValue, outputValue}
+	};
+	
+	return code;
+}
+
+@DataProvider (name = "Graph Invalid Input")
+public String [][] GraphInvalidCodeData() throws IOException {
+			String codeValue = excelReader.getCellData("GraphCode", 2, 0);
+			String outputValue = excelReader.getCellData("GraphCode", 2, 1);
+			String code[][]= {
+			{codeValue,outputValue}
+		};
+			
+	return code;
+}
 }

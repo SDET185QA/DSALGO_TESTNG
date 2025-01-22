@@ -140,10 +140,6 @@ public QueuePage() {
 			return Codeoutput.getText();
 		}
 		
-
-//		public String TryEditor(String message) {
-//			return message;
-//		}
  		public void fetchPythonCode(String PythonCode) {
  	        System.out.println("Editor Input: "+editorInput);
  	        util.waitForElement(answerform);
@@ -180,7 +176,7 @@ public QueuePage() {
  			driver.navigate().back();
  		}
 
-		public void signout() {
+ 		public void signout() {
 			signOutbtn.click();
 
 		}
