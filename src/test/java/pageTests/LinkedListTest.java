@@ -12,11 +12,13 @@ import utilities.LoggerLoad;
 import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertFalse;
 import static org.testng.Assert.assertNotEquals;
 
 import java.io.IOException;
 import driver.DriverFactory;
 
+import org.openqa.selenium.NoAlertPresentException;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -71,18 +73,18 @@ import org.testng.annotations.DataProvider;
 	
 	@Test
 	public void theUserIsAbleToViewTheErrorMsgWithoutEnteringCodeInTryEditorPage() {
-		linkedListPage.clickOnIntro();
-		linkedListIntroPage.navigateToLinkedListIntroPage(driver);
-		linkedListIntroPage.tryHere();
-		tryEditor.navigateToTryEditorPage(driver);
-		tryEditor.clickOnRunBtn();
-		String resultMsg = linkedListPage.getMsg();
-		LoggerLoad.info("Result Message: " + resultMsg);
-		assertEquals(resultMsg, "Please enter the text");
-	}
+			linkedListPage.clickOnIntro();
+			linkedListIntroPage.navigateToLinkedListIntroPage(driver);
+			linkedListIntroPage.tryHere();
+			tryEditor.navigateToTryEditorPage(driver);
+			tryEditor.clickOnRunBtn();
+			String resultMsg = tryEditor.getMsg();
+			LoggerLoad.info("Result Message: " + resultMsg);
+			assertEquals(resultMsg, "Please enter the text");
+		}
 	
 	@Test(dataProvider = "Valid Python Code", dataProviderClass = DataProviderClass.class)
-	public void theUserIsAbleToExecuteVallidPythonCode(String code, String expectedOutput) {
+	public void theUserIsAbleToExecuteValidPythonCode(String code, String expectedOutput) {
 		linkedListPage.clickOnIntro();
 		linkedListIntroPage.navigateToLinkedListIntroPage(driver);
 		linkedListIntroPage.tryHere();

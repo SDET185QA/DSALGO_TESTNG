@@ -16,8 +16,8 @@
 			<class name="pageTests.LoginTest"/>
 			<class name="pageTests.ArrayTest"/>
 			<class name = "pageTests.LinkedListTest"/>
+			<class name = "pageTests.StackTest"/>
 
-		</classes>
-		
+    	</classes>	
 	</test>
 </suite> <!-- Suite -->
