@@ -98,11 +98,11 @@ public class DataProviderClass {
 
 	@DataProvider (name = "Open Sub Pages")
 	public String [][] subPageExpUrl() throws IOException{
-		int totalRows = excelReader.getRowCount("SubPages");
+		int totalRows = excelReader.getRowCount("LLSubPages");
 		String subPageExpUrl [][] = new String[totalRows][2];
 		for (int rowIdx = 1; rowIdx <= totalRows; rowIdx++) {
 			for (int colIdx = 0; colIdx <= 1; colIdx++) {
-				subPageExpUrl[rowIdx - 1][colIdx] = excelReader.getCellData("SubPages", rowIdx, colIdx);
+				subPageExpUrl[rowIdx - 1][colIdx] = excelReader.getCellData("LLSubPages", rowIdx, colIdx);
 				}
 		}
 		return subPageExpUrl;
@@ -119,6 +119,31 @@ public class DataProviderClass {
 		}
 		return subPageTryEditorUrl;
 	}
+
+	@DataProvider (name = "Open Stack Sub Pages")
+	public String [][] stackSubPageExpUrl() throws IOException {
+		int totalRows = excelReader.getRowCount("StackSubPages");
+		String  stackSubPageExpUrl[][] = new String [totalRows][2];
+		for (int rowIdx = 1; rowIdx <= totalRows; rowIdx++) {
+			for (int colIdx = 0; colIdx <=1; colIdx++) {
+				stackSubPageExpUrl [rowIdx -1][colIdx] = excelReader.getCellData("StackSubPages", rowIdx, colIdx);
+			}
+		}
+		return stackSubPageExpUrl;
+	}
+	
+	@DataProvider (name = "Open Try Editor from Stack Sub pages")
+	public String [][] stackSubPageTryEditorUrl () throws IOException{
+		int totalRows = excelReader.getRowCount("StackTryEditorSubPages");
+		String stackSubPageTryEditorUrl[][] = new String [totalRows][2];
+		for (int rowIdx = 1; rowIdx <= totalRows; rowIdx++) {
+			for (int colIdx = 0; colIdx <=1; colIdx++) {
+				stackSubPageTryEditorUrl [rowIdx -1] [colIdx] = excelReader.getCellData("StackTryEditorSubPages", rowIdx, colIdx);
+			}
+		}
+		return stackSubPageTryEditorUrl;
+	}
+
 
 @DataProvider (name = "Valid Input")
 public String[][] CodeData() throws IOException {
