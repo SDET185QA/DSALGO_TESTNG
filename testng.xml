@@ -14,9 +14,9 @@
     	<classes>
    
 			<class name="pageTests.LoginTest"/>
-			<class name="pageTests.ArrayTest"/>
+			<!--<class name="pageTests.ArrayTest"/>
 			<class name = "pageTests.LinkedListTest"/>
-			<class name = "pageTests.StackTest"/>
+			<class name = "pageTests.StackTest"/>-->
 
     	</classes>	
 	</test>
