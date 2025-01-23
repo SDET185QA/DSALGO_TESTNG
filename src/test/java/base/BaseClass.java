@@ -15,7 +15,7 @@ import org.testng.annotations.Listeners;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 
-//import com.aventstack.chaintest.plugins.ChainTestListener;
+import com.aventstack.chaintest.plugins.ChainTestListener;
 
 import utilities.ExcelReader;
 
@@ -24,7 +24,7 @@ import io.qameta.allure.Allure;
 import pageObjects.LoginPage;
 import utilities.ConfigReader;
 
-//@Listeners(ChainTestListener.class)
+@Listeners(ChainTestListener.class)
 public class BaseClass {
 	public WebDriver driver;
 	public Logger logger;
