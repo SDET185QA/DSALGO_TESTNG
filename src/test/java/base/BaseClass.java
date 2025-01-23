@@ -20,7 +20,7 @@ import com.aventstack.chaintest.plugins.ChainTestListener;
 import utilities.ExcelReader;
 
 import driver.DriverFactory;
-import io.qameta.allure.Allure;
+//import io.qameta.allure.Allure;
 import pageObjects.LoginPage;
 import utilities.ConfigReader;
 
