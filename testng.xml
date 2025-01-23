@@ -3,8 +3,8 @@
 <suite name="Suite">
 
 	<listeners>
-		<listener class-name="listeners.Listeners"></listener>
-		<listener class-name="utilities.AnnotationTransformer"></listener>
+	<!--	<listener class-name="listeners.Listeners"></listener>
+-->		<listener class-name="utilities.AnnotationTransformer"></listener>
 		<listener class-name="listeners.AllureRetryListener"></listener>
 	</listeners>
 	
