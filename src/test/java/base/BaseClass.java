@@ -23,8 +23,9 @@ import driver.DriverFactory;
 import io.qameta.allure.Allure;
 import pageObjects.LoginPage;
 import utilities.ConfigReader;
+import listeners.Chaintestlistner;
 
-//@Listeners(ChainTestListener.class)
+//@Listeners({ChainTestListener.class,Chaintestlistner.class})
 public class BaseClass {
 	public WebDriver driver;
 	public Logger logger;
