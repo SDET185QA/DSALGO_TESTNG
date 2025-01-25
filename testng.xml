@@ -17,6 +17,7 @@
 			<class name="pageTests.ArrayTest"/>
 			<class name = "pageTests.LinkedListTest"/>
 			<class name = "pageTests.StackTest"/>
+			<class name = "pageTests.RegistrationTest"/>
 
     	</classes>	
 	</test>
