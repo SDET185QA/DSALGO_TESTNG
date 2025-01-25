@@ -13,9 +13,11 @@ public class Chaintestlistner implements ITestListener {
 	WebDriver driver =DriverFactory.getDriver(); 
 	@Override
 	public void onTestFailure(ITestResult result) {
+		String testName = result.getName();
 		driver = DriverFactory.getDriver();
 		final byte[] screenshot =  ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
-	//	ChainTestListener.embed(screenshot, "image/png");
+		//ChainTestListener.log(testName+ " "+" testcase failed");// logs for failed test cases   
+	    //ChainTestListener.embed(screenshot, "image/png");//to attach screenshot for failed test cases
 		
 	}
 }

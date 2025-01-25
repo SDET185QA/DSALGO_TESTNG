@@ -16,9 +16,7 @@ import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 
 //import com.aventstack.chaintest.plugins.ChainTestListener;
-
 import utilities.ExcelReader;
-
 import driver.DriverFactory;
 import io.qameta.allure.Allure;
 import pageObjects.LoginPage;
@@ -43,15 +41,11 @@ public class BaseClass {
 		driver.manage().window().maximize();
 
 	}
-
 	@AfterClass
 	public void tearDown() {
 		driver.manage().deleteAllCookies();
 		driver.quit();
 	}
-
-
-	
 	public void loginToPortal() throws IOException
 	{
 		LoginPage sign = new LoginPage();
@@ -68,8 +62,4 @@ public class BaseClass {
 		sign.clickonLogin(); 
 		
 	}
-	
-
-	
-
 }

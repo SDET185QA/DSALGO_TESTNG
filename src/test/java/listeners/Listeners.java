@@ -48,7 +48,6 @@ public class Listeners implements ITestListener {
 		sparkReporter.config().setDocumentTitle("DSAlgo Automation Report");
 		sparkReporter.config().setTimeStampFormat("MM/dd/yyyy hh:mm:ss");
 		sparkReporter.config().setTheme(Theme.STANDARD);
-		
 		extentReport = new ExtentReports();
 		extentReport.attachReporter(sparkReporter);
 			
