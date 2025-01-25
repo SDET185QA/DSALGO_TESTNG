@@ -1,6 +1,8 @@
 package pageObjects;
 
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.WebElement;
@@ -118,7 +120,7 @@ public class LoginPage {
 	  public void clickonLogout() {
 			LoggerLoad.info("Clicking in Signout Button " );
 			signoutButton.click();
-			}
+	  }
 				
 	   public String getlogoutAlert(String expectedLogoutMessage) {
 		   LoggerLoad.info("Getting Alert Message" );
@@ -126,6 +128,11 @@ public class LoginPage {
 		   LoggerLoad.info(logoutMessage);
 		   return logoutMessage;
 		   }
-				
+			
+	   public void clickOnSignOutIfLoggedIn() {
+		   if (driver.findElements(By.xpath("//a[@href='/logout']")).size() != 0) {
+			   clickonLogout();
+		   }
+	   }
 
 }

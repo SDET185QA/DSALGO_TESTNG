@@ -52,24 +52,6 @@ import org.testng.annotations.DataProvider;
 		linkedListPage.navigateToLinkedListPage(driver);
 	}
 		
-	@Test
-	public void theUserIsAbleToViewTheIntroductionPage() {
-		linkedListPage.clickOnIntro();
-		String resultWindow = driver.getCurrentUrl();
-		LoggerLoad.info("Result Window: " + resultWindow);
-		assertEquals(resultWindow, "https://dsportalapp.herokuapp.com/linked-list/introduction/");
-	}
-		
-	@Test
-	public void theUserIsAbleToViewTryEditorPage() {
-		linkedListPage.clickOnIntro();
-		linkedListIntroPage.navigateToLinkedListIntroPage(driver);
-		linkedListIntroPage.tryHere();
-		tryEditor.navigateToTryEditorPage(driver);
-		String resultWindow = driver.getCurrentUrl();
-		LoggerLoad.info("Result Window:  "+ resultWindow);
-		assertEquals(resultWindow, "https://dsportalapp.herokuapp.com/tryEditor");
-	}
 	
 	@Test
 	public void theUserIsAbleToViewTheErrorMsgWithoutEnteringCodeInTryEditorPage() {

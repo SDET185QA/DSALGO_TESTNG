@@ -43,6 +43,7 @@ public class HomePage {
 
 	//Register
 	@FindBy (xpath="//a[@href ='/register']")WebElement register;
+	
 
 	//Return to Home page
 	@FindBy(xpath = "//a[@href=\"/home\"]")

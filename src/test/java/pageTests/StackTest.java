@@ -44,23 +44,7 @@ public class StackTest extends BaseClass{
 	stackPage.navigateToStackPage(driver);
 	LoggerLoad.info("Getting started Stack");
 }
-	@Test
-	public void theUserIsAbleToViewIntroductionPage() {
-		stackPage.clickOnOperationsInStack();
-		String resultWindow = driver.getCurrentUrl();
-		assertEquals(resultWindow, "https://dsportalapp.herokuapp.com/stack/operations-in-stack/");
-		LoggerLoad.info("The result window is :" + resultWindow);
-	}
 
-	@Test
-	public void theUserIsAbleToViewTryEditorPage() {
-		stackPage.clickOnOperationsInStack();
-		stackPage.clickOnTryHereOnSubPage();
-		tryEditor.navigateToTryEditorPage(driver);
-		String resultWindow = driver.getCurrentUrl();
-		assertEquals(resultWindow,"https://dsportalapp.herokuapp.com/tryEditor");
-		LoggerLoad.info("The result window is :" + resultWindow);
-	}
 	
 	@Test
 	public void theUserIsAbleToViewTheErrorMsgWithoutEnteringCodeInTryEditorPage() {

@@ -81,6 +81,16 @@ public class RegistrationPage {
 		return url;
 	}
 
-	
+	public String getValidationMsgOnUserName() {
+		return userName.getAttribute("validationMessage");
+	}
 
+
+	public String getValidationMsgOnPassword() {
+		return passWord.getAttribute("validationMessage");
+	}
+	
+	public String getValidationMsgOnPasswordConf() {
+		return passWordConfirmation.getAttribute("validationMessage");
+	}
 }
