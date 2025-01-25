@@ -20,22 +20,22 @@ public class LoginPage {
 		WebElement getStarted;
 		
 		@FindBy(linkText = "Sign in")
-	    private WebElement signIn;
+	    WebElement signIn;
 		
 		@FindBy(id = "id_username")
-	    private WebElement usernameField;
+	    WebElement usernameField;
 		
 		@FindBy(id = "id_password")
-	    private WebElement passwordField;
+	    WebElement passwordField;
 		
 		@FindBy(xpath = "//input[contains(@value,'Login')]")
-	    private WebElement loginButton;
+	    WebElement loginButton;
 		
 		@FindBy(xpath = "//a[@href='/logout']")
-	    private WebElement signoutButton;
+	    WebElement signoutButton;
 		
 		@FindBy(xpath = "//div[@class='alert alert-primary']")
-	    private WebElement logoutalert;
+	    WebElement logoutalert;
 		
 		
 		

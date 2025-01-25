@@ -18,6 +18,8 @@
 			<class name = "pageTests.LinkedListTest"/>
 			<class name = "pageTests.StackTest"/>
 			<class name = "pageTests.RegistrationTest"/>
+			<class name = "pageTests.QueueTest"/>  
+			<class name = "pageTests.GraphTest"/>  
 
     	</classes>	
 	</test>

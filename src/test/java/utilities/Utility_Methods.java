@@ -45,8 +45,8 @@ public class Utility_Methods {
 
     public void enterPythonCodeForPractice(String code, WebElement element)
     {
-       new Actions(driver).keyDown(Keys.CONTROL).sendKeys("a").keyUp(Keys.CONTROL).sendKeys(Keys.DELETE).perform();
-       // new Actions(driver).keyDown(Keys.COMMAND).sendKeys("a").sendKeys(Keys.DELETE).keyUp(Keys.COMMAND).perform();
+       //new Actions(driver).keyDown(Keys.CONTROL).sendKeys("a").keyUp(Keys.CONTROL).sendKeys(Keys.DELETE).perform();
+        new Actions(driver).keyDown(Keys.COMMAND).sendKeys("a").sendKeys(Keys.DELETE).keyUp(Keys.COMMAND).perform();
         String[] str1 = code.split("\n");
         for (int i = 0; i < str1.length; i++) {
             if (str1[i].equalsIgnoreCase("\\b")) {

@@ -29,80 +29,80 @@ public class ArrayPage {
 	WebElement getStarted;
 	
 	@FindBy(xpath = "//div[@id='navbarCollapse']//a[contains(text(), 'Data Structures')]")
-    private WebElement dropdownoption;
+    WebElement dropdownoption;
 	@FindBy(xpath = "//a[@class='dropdown-item'][@href='/array']")
-    private WebElement arraydropdown;
+    WebElement arraydropdown;
 	
 	
 	@FindBy(xpath = "//a[@href='array']")
-    private WebElement arrayGetStarted;
+    WebElement arrayGetStarted;
 	@FindBy(xpath="//a[@href='arrays-in-python']")
-    private WebElement arraysInPython;
+    WebElement arraysInPython;
 	
 	
 	@FindBy(xpath="//a[@href='/tryEditor']")
-    private WebElement tryHereLink;
+    WebElement tryHereLink;
 
 	
 	@FindBy(xpath="//a[@href='/array/practice']")
-    private WebElement PraciceQuestionsButton;
+    WebElement PraciceQuestionsButton;
 	
 	
 	@FindBy(xpath="//a[@href='/question/1']")
-    private WebElement searchTheArrayButton;
+    WebElement searchTheArrayButton;
 	
 	@FindBy(xpath="//a[@href='/question/2']")
-    private WebElement maxConsecutiveOnesButton;
+    WebElement maxConsecutiveOnesButton;
 	
 	@FindBy(xpath="//a[@href='/question/3']")
-    private WebElement findNumbersWithEvenDigit;
+    WebElement findNumbersWithEvenDigit;
 	
 	@FindBy(xpath="//a[@href='/question/4']")
-    private WebElement sqauresOfSortedArray;
+    WebElement sqauresOfSortedArray;
 	
 	@FindBy(xpath="//a[@href='arrays-using-list']")
-    private WebElement arraysUsingList;
+    WebElement arraysUsingList;
 	
 	@FindBy(xpath="//a[@href='basic-operations-in-lists']")
-    private WebElement basicOperationList;
+    WebElement basicOperationList;
 	
 	@FindBy (xpath="//form/div/div/div/textarea")
-	private WebElement editorInput;
+	WebElement editorInput;
 	
 	@FindBy (id="answer_form")
-	private WebElement answerform;
+	WebElement answerform;
 	
 	@FindBy (xpath="//button[text()='Run']") 
-	private WebElement runButton;
+	WebElement runButton;
 	
 	@FindBy (xpath="//pre[@id='output']") 
-	private WebElement output;
+	WebElement output;
 	
 	
 	@FindBy (xpath="//input[@value='Submit']") 
-	private WebElement submitButton;
+	WebElement submitButton;
 	
 	
 	@FindBy (xpath="//a[text()='Find Numbers with Even Number of Digits']") 
-	private WebElement findNumbersWithEvenNumberOfDigitsLink;
+	WebElement findNumbersWithEvenNumberOfDigitsLink;
 	
 	@FindBy (xpath="//a[text()='Squares of  a Sorted Array']") 
-	private WebElement squaresOfASortedArrayLink;
+	WebElement squaresOfASortedArrayLink;
 	
 	@FindBy (xpath ="//a[@href ='applications-of-array']") 
-	private WebElement applicationsOfArray;
+	WebElement applicationsOfArray;
 	
 	@FindBy (id = "output")
-	private WebElement Codeoutput;
+	WebElement Codeoutput;
 	@FindBy (xpath = "//div[@class = 'CodeMirror-scroll']")
-	private WebElement CodeEditor;
+	WebElement CodeEditor;
 	
 	@FindBy (xpath = "//textarea[@tabindex='0']")
-	private WebElement Question_Input;
+	WebElement Question_Input;
 	
 	
 	@FindBy (xpath = "//a[text()='Sign out']")
-	private WebElement signOutbtn;
+	WebElement signOutbtn;
 
 	
 	public ArrayPage() {
