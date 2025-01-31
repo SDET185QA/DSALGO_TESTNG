@@ -44,6 +44,9 @@ public class HomePage {
 	//Register
 	@FindBy (xpath="//a[@href ='/register']")WebElement register;
 	
+	@FindBy (xpath = "//a[text()='Sign out']")
+	WebElement signOutbtn;
+
 
 	//Return to Home page
 	@FindBy(xpath = "//a[@href=\"/home\"]")
@@ -145,6 +148,34 @@ public class HomePage {
      }
 
 	}
+	
+	public void getStartedDSintroclick() {
+		getStartedDSintro.click();
+	}
+	
+	public void getStartedarrayclick() {
+		getStartedarray.click();
+	}
+	
+	public void  getStartedlinkedlistclick() {
+		 getStartedlinkedlist.click();
+	}
+	
+	public void getStartedstackclick() {
+		getStartedstack.click();
+	}
+	
+	public void getStartedqueueclick() {
+		getStartedqueue.click();
+	}
+	
+	public void getStartedtreeclick() {
+		getStartedtree.click();
+	}
+	
+	public void getStartedgraphclick() {
+		getStartedgraph.click();
+	}
 	//Signing
 	public void signinLink() {
 		signin.click();
@@ -167,4 +198,9 @@ public class HomePage {
 	public void retunToHomePage() {
 		retHomePage.click();
 	}
+	public void signout() {
+		signOutbtn.click();
+
+	}
+	
 }
