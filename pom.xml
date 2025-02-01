@@ -15,10 +15,10 @@
 				<configuration>
 					<suiteXmlFiles>
 
-						<suiteXmlFile>testng.xml</suiteXmlFile>
+						<!--<suiteXmlFile>testng.xml</suiteXmlFile>-->
 						<!-- <suiteXmlFile>Parallel_testng.xml</suiteXmlFile> -->
 
-						<!--<suiteXmlFile>CrossBrowser_testng.xml</suiteXmlFile> -->
+					<suiteXmlFile>CrossBrowser_testng.xml</suiteXmlFile>
 					</suiteXmlFiles>
 				</configuration>
 			</plugin>
