@@ -21,7 +21,7 @@ import driver.DriverFactory;
 import io.qameta.allure.Allure;
 import pageObjects.LoginPage;
 import utilities.ConfigReader;
-import listeners.Chaintestlistner;
+//import listeners.Chaintestlistner;
 
 //@Listeners({ChainTestListener.class,Chaintestlistner.class})
 public class BaseClass {
