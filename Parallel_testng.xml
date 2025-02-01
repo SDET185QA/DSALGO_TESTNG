@@ -14,7 +14,16 @@
     <classes>
    
 	  <class name="pageTests.LoginTest"/> 
-	  <class name="pageTests.ArrayTest"/>        
+	  <class name="pageTests.ArrayTest"/>  
+	  <class name = "pageTests.LinkedListTest"/>
+	  <class name = "pageTests.StackTest"/>
+	  <class name = "pageTests.RegistrationTest"/>
+	  <class name = "pageTests.QueueTest"/>  
+	  <class name = "pageTests.GraphTest"/>  
+	  <class name = "pageTests.TreeTest"/>  
+	  <class name = "pageTests.HomePageTest"/>  
+	  <class name = "pageTests.DataStructuresTest"/>  
+	  <class name = "pageTests.HomePageWithoutSignInTest"/>       
    	</classes>
   </test>
 </suite> <!-- Suite -->
