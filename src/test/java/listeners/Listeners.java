@@ -2,6 +2,8 @@ package listeners;
 
 
 import java.io.ByteArrayInputStream;
+import java.io.File;
+import java.io.IOException;
 
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -44,11 +46,19 @@ public class Listeners implements ITestListener {
 	public void onStart(ITestContext context) {
 		
 		sparkReporter = new ExtentSparkReporter("./target/extent-reports/extent-report.html");	
+		
 		sparkReporter.config().setReportName("Quality Questers DSAlgo");
 		sparkReporter.config().setDocumentTitle("DSAlgo Automation Report");
 		sparkReporter.config().setTimeStampFormat("MM/dd/yyyy hh:mm:ss");
 		sparkReporter.config().setTheme(Theme.STANDARD);
 		extentReport = new ExtentReports();
+		
+		try {
+			sparkReporter.loadXMLConfig(new File("extent-config.xml"));
+		} catch (IOException e) {
+			
+		}
+		
 		extentReport.attachReporter(sparkReporter);
 			
 		extentReport.setSystemInfo("Environment", "QA");
