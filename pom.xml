@@ -15,8 +15,8 @@
 				<configuration>
 					<suiteXmlFiles>
 
-						<!--<suiteXmlFile>testng.xml</suiteXmlFile>-->
-						<suiteXmlFile>Parallel_testng.xml</suiteXmlFile> 
+						<suiteXmlFile>testng.xml</suiteXmlFile>
+						<!--<suiteXmlFile>Parallel_testng.xml</suiteXmlFile> -->
 
 				<!--	<suiteXmlFile>CrossBrowser_testng.xml</suiteXmlFile>-->
 					</suiteXmlFiles>
@@ -29,21 +29,6 @@
 				<configuration>
 					<!-- put your configurations here -->
 				</configuration>
-			</plugin>
-
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-failsafe-plugin</artifactId>
-				<version>3.5.0</version>
-				<executions>
-					<execution>
-						<goals>
-							<goal>integration-test</goal>
-							<goal>verify</goal>
-						</goals>
-					</execution>
-				</executions>
-
 			</plugin>
 
 		</plugins>
@@ -136,7 +121,7 @@
 		</dependency>
 
 		<!-- https://mvnrepository.com/artifact/com.aventstack/chaintest-testng -->
-		<!--<dependency>
+	<!--	<dependency>
 			<groupId>com.aventstack</groupId>
 			<artifactId>chaintest-testng</artifactId>
 			<version>1.0.7</version>
