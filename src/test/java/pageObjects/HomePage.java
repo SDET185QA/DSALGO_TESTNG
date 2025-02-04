@@ -4,6 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import utilities.ConfigReader;
 
 import utilities.LoggerLoad;
 import driver.DriverFactory;
@@ -11,8 +12,7 @@ import driver.DriverFactory;
 public class HomePage {
 	
 	WebDriver driver = DriverFactory.getDriver();
-	String url ="https://dsportalapp.herokuapp.com";
-	String homePageurl="https://dsportalapp.herokuapp.com/home";
+
 	
 	//Get Started Button
 	@FindBy (xpath="//button[@class='btn']")WebElement getStartedbtn;
@@ -58,7 +58,8 @@ public class HomePage {
 	
 	//DS-Algo Main url
 	public void dsalgoportal() {
-		driver.get(url);
+		driver.get(ConfigReader.getlUrl("applicationUrl"));
+
 		PageFactory.initElements(driver,this);
 	}
 
@@ -73,9 +74,7 @@ public class HomePage {
 		return title;
 	}
 
-	public void homepage() {
-		driver.get(homePageurl);
-	}
+
 	public String getAlert() {
 		System.out.println("I am inside Get Alert");
 		String alertMsg=alertMessage.getText();
